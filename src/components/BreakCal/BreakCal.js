@@ -1,9 +1,16 @@
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import React from 'react';
-import './BreakCal.css'
+import './BreakCal.css';
 
 const BreakCal = (props) => {
+    const notify = () => {
+        toast('Congratulation you done with your activity');
+    }
+    
     let time = 0;
     const { second } = props;
     
@@ -62,7 +69,8 @@ const BreakCal = (props) => {
                 <p><strong>0</strong> seconds</p>
             </div>
             <div className='completed_btn'>
-                <button>Activity Completed</button>
+                <button onClick={notify}>Activity Completed</button>
+                <ToastContainer/>
             </div>
         </div>
     );
