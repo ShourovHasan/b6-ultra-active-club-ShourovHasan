@@ -13,7 +13,7 @@ const FitnessCards = () => {
             .then(data => setCategories(data))
     }, [])
     const handleAddToTime = (selectedCategory) =>{
-        console.log('Clicked', selectedCategory);
+        console.log('Clicked');
     }
 
     return (
@@ -26,8 +26,7 @@ const FitnessCards = () => {
                 <div className='categories_container'>
                     {
                         categories.map(category => <Category category={category} handleAddToTime={handleAddToTime} key={category.id}></Category>)
-                    }
-                    
+                    }                    
                 </div>
             </div>
             <div className='fitness_Calculation'>
