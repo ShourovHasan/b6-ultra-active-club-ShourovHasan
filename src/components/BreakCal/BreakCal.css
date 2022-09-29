@@ -63,6 +63,7 @@
     display: flex;
     padding: 5px 35px;
     justify-content: space-between;
+    align-items: center;
     border: none;
     border-radius: 10px;
     font-size: 20px;
@@ -74,6 +75,7 @@
     display: flex;
     padding: 5px 35px;
     justify-content: space-between;
+    align-items: center;
     border: none;
     border-radius: 10px;
     font-size: 20px;

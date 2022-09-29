@@ -34,7 +34,7 @@ const BreakCal = (props) => {
     }    
     // toast notification after completed break time
     const notify = () => {
-        toast('Congratulations !!! you done with your activity');
+        toast('Congratulations !!! you are done with the activity.');
     }    
     // calculate and show profile and break and exercise time 
     return (
