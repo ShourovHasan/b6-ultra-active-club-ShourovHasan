@@ -26,7 +26,7 @@ const FitnessCards = () => {
         <div className='fitness_container'>
             <div className='fitness_body'>
                 <div className='fitness_Header'>                 
-                    <h1><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon> Fitness Club</h1>
+                    <a href='App.js' alter="brand"><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon> Fitness Club</a>
                 </div>
                 <p>Select today's exercise</p>
                 <div className='categories_container'>

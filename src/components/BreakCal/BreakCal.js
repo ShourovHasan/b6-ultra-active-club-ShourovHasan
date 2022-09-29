@@ -33,7 +33,7 @@ const BreakCal = (props) => {
     }    
     
     const notify = () => {
-        toast('Congratulation you done with your activity');
+        toast('Congratulations !!! you done with your activity');
     }    
     return (
         <div>

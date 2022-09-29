@@ -4,7 +4,7 @@
 }
 .fitness_body{
     margin: 0;
-    padding: 0 5%;
+    padding: 5%;
     background-color: aliceblue;
 }
 .fitness_body p {
@@ -14,13 +14,18 @@
 .categories_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 15px;
     /* margin: 30px; */
 }
 .fitness_Header{
-    color: #0dd90d;
-    font-size: larger;
+    font-size: 50px;
+    font-weight: 600;
 }
+.fitness_Header a{
+    text-decoration: none;
+    color: #0dd90d;
+}
+
 /* calculation  */
 .fitness_Calculation{
     padding: 20px;

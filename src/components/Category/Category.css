@@ -1,17 +1,19 @@
 .category{
-    height: 620px;
-    width: 300px;
+    height: 630px;
+    width: 100%;
     border: 1px solid #95A0A7;
     border-radius: 8px;
     background-color: white;
     position: relative;
 }
 .category img{
-    height: 286px;
-    width: 286px;
-    text-align: center;
+    height: 250px;
+    width: 100%;
+    /* text-align: center; */
+    /* justify-content: center; */
     padding: 7px 7px 0 7px;
     border-radius: 15px;
+    margin: auto;
 }
 .category_name{
     font-family: 'Lato';
