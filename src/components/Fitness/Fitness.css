@@ -18,7 +18,8 @@
     /* margin: 30px; */
 }
 .fitness_Header{
-    color: rgb(255, 204, 0);
+    color: #0dd90d;
+    font-size: larger;
 }
 /* calculation  */
 .fitness_Calculation{

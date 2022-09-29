@@ -49,6 +49,7 @@
     padding: 8px;
     margin: 15px 5px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .break_time div:hover p {

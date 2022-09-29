@@ -3,21 +3,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './BreakCal.css';
 
 const BreakCal = (props) => {
-    const notify = () => {
-        toast('Congratulation you done with your activity');
-    }
-    
-    let time = 0;
     const { second } = props;
-    
+    const [breakTime, setBreakTime] = useState(0);
+
+    useEffect(() => {
+        const storedSeconds = localStorage.getItem('time_Seconds');
+        if (storedSeconds) {
+            setBreakTime(storedSeconds);
+        }
+    }, [])
+
+    let time = 0;
     for (const category of second) {
         time = time + category.time;
     }
-    console.log(second);
+    const notify = () => {
+        toast('Congratulation you done with your activity');
+    }    
+    // console.log(second);
+    const setSeconds = (value) => {
+        const storedtime = localStorage.getItem('time_Seconds');
+        if (storedtime) {
+            localStorage.removeItem('time_Seconds');
+        }        
+        setBreakTime(value);
+
+        localStorage.setItem('time_Seconds', JSON.stringify(value));
+    }    
+    
     return (
         <div>
             <div className='profile'>
@@ -44,19 +61,19 @@ const BreakCal = (props) => {
             <h2>Add A Break</h2>
             <div className='break_time'>
                 <div>
-                    <p><span>10</span>s</p>
+                    <p><span onClick={() => setSeconds(10)}>10</span>s</p>
                 </div>
                 <div>
-                    <p><span>20</span>s</p>
+                    <p><span onClick={() => setSeconds(20)}>20</span>s</p>
                 </div>
                 <div>
-                    <p><span>30</span>s</p>
+                    <p><span onClick={() => setSeconds(30)}>30</span>s</p>
                 </div>
                 <div>
-                    <p><span>40</span>s</p>
+                    <p><span onClick={() => setSeconds(40)}>40</span>s</p>
                 </div>
                 <div>
-                    <p><span>50</span>s</p>
+                    <p><span onClick={() => setSeconds(50)}>50</span>s</p>
                 </div>
             </div>
             <h2>Exercise Details</h2>
@@ -66,7 +83,7 @@ const BreakCal = (props) => {
             </div>
             <div className='break_times'>
                 <p>Break time</p>
-                <p><strong>0</strong> seconds</p>
+                <p><strong>{breakTime}</strong> seconds</p>
             </div>
             <div className='completed_btn'>
                 <button onClick={notify}>Activity Completed</button>
