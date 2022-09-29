@@ -21,9 +21,6 @@ const BreakCal = (props) => {
     for (const category of second) {
         time = time + category.time;
     }
-    const notify = () => {
-        toast('Congratulation you done with your activity');
-    }    
     // console.log(second);
     const setSeconds = (value) => {
         const storedtime = localStorage.getItem('time_Seconds');
@@ -31,10 +28,13 @@ const BreakCal = (props) => {
             localStorage.removeItem('time_Seconds');
         }        
         setBreakTime(value);
-
+        
         localStorage.setItem('time_Seconds', JSON.stringify(value));
     }    
     
+    const notify = () => {
+        toast('Congratulation you done with your activity');
+    }    
     return (
         <div>
             <div className='profile'>
@@ -61,19 +61,19 @@ const BreakCal = (props) => {
             <h2>Add A Break</h2>
             <div className='break_time'>
                 <div>
-                    <p><span onClick={() => setSeconds(10)}>10</span>s</p>
+                    <p onClick={() => setSeconds(10)}><span>10</span>s</p>
                 </div>
                 <div>
-                    <p><span onClick={() => setSeconds(20)}>20</span>s</p>
+                    <p onClick={() => setSeconds(20)}><span>20</span>s</p>
                 </div>
                 <div>
-                    <p><span onClick={() => setSeconds(30)}>30</span>s</p>
+                    <p onClick={() => setSeconds(30)}><span>30</span>s</p>
                 </div>
                 <div>
-                    <p><span onClick={() => setSeconds(40)}>40</span>s</p>
+                    <p onClick={() => setSeconds(40)}><span>40</span>s</p>
                 </div>
                 <div>
-                    <p><span onClick={() => setSeconds(50)}>50</span>s</p>
+                    <p onClick={() => setSeconds(50)}><span>50</span>s</p>
                 </div>
             </div>
             <h2>Exercise Details</h2>
