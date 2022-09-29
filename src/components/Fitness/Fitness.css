@@ -1,3 +1,4 @@
+/* fitness body and categories css  */
 .fitness_container{
     display: grid;
     grid-template-columns: 3.5fr 1fr;
@@ -26,11 +27,12 @@
     color: #0dd90d;
 }
 
-/* calculation  */
+/* calculation of exercise and break time css */
 .fitness_Calculation{
     padding: 20px;
 }
 
+/* responsive */
 @media screen and (max-width: 1300px) {
     .fitness_container {
             grid-template-columns: 3fr 1.5fr;

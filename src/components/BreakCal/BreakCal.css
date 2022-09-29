@@ -1,3 +1,4 @@
+/* my profiles css  */
 .profile {
     display: flex;
     align-items: center;
@@ -16,7 +17,6 @@
 .profile_details p strong {
     font-size: 21px;
 }
-
 .my_fitness {
     background-color: aliceblue;
     margin: 10px auto;
@@ -31,7 +31,7 @@
 .my_fitness div span strong {
     font-size: 25px;
 }
-
+/* breaktime css  */
 .break_time {
     background-color: aliceblue;
     margin: 10px auto;
@@ -56,7 +56,7 @@
     background-color: #4e4efa;
     color: white;
 }
-
+/* exercise time css  */
 .exercise_time {
     background-color: aliceblue;
     margin: 10px auto;
@@ -67,7 +67,7 @@
     border-radius: 10px;
     font-size: 20px;
 }
-
+/* break times css  */
 .break_times {
     background-color: aliceblue;
     margin: 10px auto;
@@ -78,7 +78,7 @@
     border-radius: 10px;
     font-size: 20px;
 }
-
+/* completed_btn css  */
 .completed_btn {
     margin: 20px 0;
 }

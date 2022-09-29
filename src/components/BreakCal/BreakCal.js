@@ -9,19 +9,20 @@ import './BreakCal.css';
 const BreakCal = (props) => {
     const { second } = props;
     const [breakTime, setBreakTime] = useState(0);
-
+    // data loaded from localStorage
     useEffect(() => {
         const storedSeconds = localStorage.getItem('time_Seconds');
         if (storedSeconds) {
             setBreakTime(storedSeconds);
         }
     }, [])
-
+    // calculate time for exercise
     let time = 0;
     for (const category of second) {
         time = time + category.time;
     }
     // console.log(second);
+    // set stored time when click break time 
     const setSeconds = (value) => {
         const storedtime = localStorage.getItem('time_Seconds');
         if (storedtime) {
@@ -31,10 +32,11 @@ const BreakCal = (props) => {
         
         localStorage.setItem('time_Seconds', JSON.stringify(value));
     }    
-    
+    // toast notification after completed break time
     const notify = () => {
         toast('Congratulations !!! you done with your activity');
     }    
+    // calculate and show profile and break and exercise time 
     return (
         <div>
             <div className='profile'>

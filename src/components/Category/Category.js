@@ -2,8 +2,10 @@ import React from 'react';
 import './Category.css';
 
 const Category = ({ category, handleAddToTime }) => {
+    // destructuring 
     const { picture, title, about, age, time } = category;
     // console.log(handleAddToTime);
+    // load categories 
     return (
         <div className='category'>
             <img src={picture} alt="" />
