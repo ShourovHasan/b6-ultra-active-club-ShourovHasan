@@ -1,0 +1,150 @@
+.fitness_container{
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+}
+.fitness_body{
+    margin: 0;
+    padding: 0 5%;
+    background-color: aliceblue;
+}
+.fitness_body p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.categories_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    /* margin: 30px; */
+}
+.fitness_Header{
+    color: rgb(255, 204, 0);
+}
+/* calculation  */
+.fitness_Calculation{
+    padding: 20px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile img{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;    
+}
+.profile_details{
+    padding-left: 10px;
+}
+.profile_details p strong{
+    font-size: 21px;
+}
+.my_fitness{
+    background-color: aliceblue;
+    margin: 10px auto;
+    display: flex;
+    padding: 10px 35px;
+    justify-content: space-between;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.my_fitness div span strong{
+    font-size: 25px;
+}
+.break_time{
+    background-color: aliceblue;
+    margin: 10px auto;
+    display: flex;
+    padding: 5px 35px;
+    justify-content: space-between;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.break_time div p{
+    background-color: white;
+    border: none;
+    padding: 8px;
+    margin: 15px 5px;
+    border-radius: 50%;
+}
+.break_time div:hover p{
+    background-color: #4e4efa;
+    color: white;
+}
+.exercise_time{
+    background-color: aliceblue;
+    margin: 10px auto;
+    display: flex;
+    padding: 5px 35px;
+    justify-content: space-between;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.break_times{
+    background-color: aliceblue;
+    margin: 10px auto;
+    display: flex;
+    padding: 5px 35px;
+    justify-content: space-between;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.completed_btn{
+    margin: 20px 0;
+}
+.completed_btn button{
+    width: 100%;    
+    background-color: rgb(13, 217, 13);
+    color: white;
+    padding: 15px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}
+.completed_btn:hover button{
+    background-color: #4e4efa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .fitness_container {
+            grid-template-columns: 3fr 1.5fr;
+    }
+    .categories_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 992px) {
+    .fitness_container {
+            grid-template-columns: 3fr 2fr;
+        }
+    .categories_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .categories_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .fitness_container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

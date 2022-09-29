@@ -1,0 +1,40 @@
+.category{
+    height: 620px;
+    width: 300px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+}
+.category img{
+    height: 286px;
+    width: 286px;
+    text-align: center;
+    padding: 7px 7px 0 7px;
+    border-radius: 15px;
+}
+.category_name{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px;
+    letter-spacing: 0.0015em;
+    margin-top: 5px;
+}
+.category_details{
+    margin: 0 14px;
+}
+.btn_category{
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: rgb(13, 217, 13);
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 8px;
+}
+.btn_category:hover{
+    background-color: #4e4efa;
+}
