@@ -2,7 +2,8 @@ import React from 'react';
 import './Category.css';
 
 const Category = ({ category, handleAddToTime }) => {
-    const { id, picture, title, about, age, time } = category;
+    const { picture, title, about, age, time } = category;
+    // console.log(handleAddToTime);
     return (
         <div className='category'>
             <img src={picture} alt="" />
@@ -12,7 +13,7 @@ const Category = ({ category, handleAddToTime }) => {
                 <p>For Age: <strong>{age}</strong></p>
                 <p>Time required: <strong>{time}s</strong></p>
             </div>
-            <button onClick={() => handleAddToTime(id)} className='btn_category'>Add to list</button>
+            <button onClick={() => handleAddToTime(category)} className='btn_category'>Add to list</button>
         </div>
     );
 };
